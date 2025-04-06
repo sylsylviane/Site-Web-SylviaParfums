@@ -1,0 +1,35 @@
+.texte-image {
+  display: flex;
+  flex-direction: column;
+}
+
+.texte-image > div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.texte-image header {
+  padding: var(--space-xl);
+}
+
+.texte-image > div > * {
+  padding: var(--space-xl);
+}
+
+.texte-image img {
+  height: 20rem;
+  object-fit: cover;
+}
+
+.texte-image p {
+  max-width: 95ch;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+.texte-image span {
+  font-weight: bold;
+}

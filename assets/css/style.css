@@ -1,0 +1,22 @@
+@import url("./base/colors.css");
+@import url("./base/typography.css");
+@import url("./base/spacing.css");
+
+/* Composant individuels */
+@import url("./components/liste-parfums.css");
+@import url("./components/parfum.css");
+@import url("./components/aside.css");
+@import url("./components/modale.css");
+@import url("./components/carrousel.css");
+@import url("./components/bouton.css");
+@import url("./components/texte-image.css");
+
+/* Mise en page complexe */
+@import url("./layout/general.css");
+@import url("./layout/navigation-principale.css");
+@import url("./layout/accueil.css");
+@import url("./layout/a-propos.css");
+@import url("./layout/formulaire.css");
+
+/* Exceptions */
+@import url("./layout/exception.css");

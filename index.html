@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sylvia Parfums</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script type="module" src="assets/js/pages/accueil.js" defer></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="entete">
+      <!-- LOGO -->
+      <a href="index.html"
+        ><img src="assets/img/logo2.png" alt="logo" class="logo"
+      /></a>
+      <!-- NAVIGATION -->
+      <nav class="navigation-principale">
+        <div class="conteneur-mode-nuit">
+          <i class="ri-moon-line" data-mode="nuit"></i>
+          <i class="ri-sun-line" data-mode="jour"></i>
+        </div>
+      </nav>
+    </header>
+    <main data-name="accueil">
+      <!-- FILTRES -->
+      <section>
+        <header>
+          <h1>Liste des parfums</h1>
+        </header>
+        <div class="section-header">
+          <div class="filtres">
+            <div class="moinsDeCent bouton">
+              Filtrer les parfums de 100$ et moins
+            </div>
+            <div class="tri-asc bouton">Trier par ordre de prix croissant</div>
+            <div class="parfumHomme bouton">Parfum pour hommes</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTENU -->
+      <section class="produits">
+        <div class="liste-parfums"></div>
+
+        <aside class="aside"></aside>
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="pied-de-site">
+      <p>&copy; 2024 Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

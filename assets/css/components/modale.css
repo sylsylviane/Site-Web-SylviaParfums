@@ -1,0 +1,95 @@
+@keyframes scale-out-center {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+}
+
+.modale-conteneur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100dvw;
+  min-height: 100dvh;
+  background: rgba(71, 71, 71, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  z-index: 666;
+
+  & .modale {
+    position: relative;
+    display: flex;
+    max-width: 50%;
+    column-gap: var(--space-xl);
+    padding: 1em;
+
+    background-color: hsl(0, 0%, 87%);
+    color: #121212;
+
+    & article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 50%;
+
+      & > div {
+        background-color: #121212;
+        color: hsl(0, 0%, 87%);
+        margin: 0;
+        padding: var(--space-lg);
+      }
+    }
+    & form {
+      margin-top: var(--space-xl);
+
+      & input {
+        min-width: 100%;
+        padding: var(--space-md);
+        margin-bottom: var(--space-md);
+      }
+
+      & button {
+        background-color: #121212;
+        color: hsl(0, 0%, 87%);
+
+        &:hover {
+          background-color: #d7b053;
+          color: #121212;
+          transition-duration: 0.25s;
+        }
+      }
+    }
+    & .fermer-modale {
+      position: absolute;
+      top: 10px;
+      right: 0px;
+      padding-right: var(--space-md);
+      cursor: pointer;
+    }
+
+    & a {
+      margin-top: var(--space-xxxl);
+      padding-top: var(--space-md);
+      border-top: 1px solid #121212;
+      color: #121212;
+    }
+  }
+}
+
+.retour span {
+  text-decoration: underline;
+}
+
+.scale-out-center {
+  -webkit-animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53)
+    both;
+  animation: scale-out-center 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}

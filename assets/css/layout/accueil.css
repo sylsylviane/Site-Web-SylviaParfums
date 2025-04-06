@@ -1,0 +1,13 @@
+/* FILTRES */
+.filtres {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+/* GALERIE PHOTO PRODUITS */
+.section-produits {
+  margin-top: var(--space-xxl);
+  display: flex;
+  flex-direction: row;
+  gap: var(--space-xxl);
+}

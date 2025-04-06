@@ -1,0 +1,27 @@
+:root {
+  --color-primary: hsl(0, 0%, 87%);
+  --color-accent: #1e1e1e;
+
+  --color-light: #d4d4d4;
+  --color-medium: #808080;
+
+  --color-link: #d7b053;
+  --color-link-disabled: #c5c5c5;
+
+  --color-info: #d75353;
+  --color-warning: #e22b2b;
+}
+
+body[data-theme="nuit"] {
+  --color-primary: #1e1e1e;
+  --color-accent: hsl(0, 0%, 87%);
+
+  --color-light: #d4d4d4;
+  --color-medium: #808080;
+
+  --color-link: #d7b053;
+  --color-link-disabled: #c5c5c5;
+
+  --color-info: #d75353;
+  --color-warning: #e22b2b;
+}

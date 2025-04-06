@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire de commande</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script type="module" src="assets/js/pages/formulaire.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="entete"> 
+      <!-- LOGO -->
+      <a href="index.html"
+        ><img src="assets/img/logo2.png" alt="logo" class="logo"
+      /></a>
+      <!-- NAVIGATION -->
+      <nav class="navigation-principale">
+        <div class="conteneur-mode-nuit">
+          <i class="ri-moon-line" data-mode="nuit"></i>
+          <i class="ri-sun-line" data-mode="jour"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main data-name="formulaire">
+      <!-- FORMULAIRE  -->
+      <header>
+        <h1>Formulaire d'achat</h1>
+      </header>
+      <form action="" method="get">
+        <!-- INFORMATIONS CLIENT  -->
+        <section data-section="1" class="client scale-in-center">
+          <header>
+            <h2>Informations sur le client</h2>
+          </header>
+          <p class="obligatoire">* Obligatoire</p>
+          <div>
+            <div>
+              <div>
+                <label for="nom">Nom<span>*</span></label>
+                <input
+                  type="text"
+                  id="nom"
+                  name="nom"
+                  minlength=""
+                  maxlength="30"
+                  required
+                  pattern="^[a-zA-ZÀ-ÿ\-\s]{1,30}$"
+                />
+                <p class="error-message">Vous devez saisir un nom valide</p>
+              </div>
+              <div>
+                <label for="prenom">Prénom<span>*</span></label>
+                <input
+                  type="text"
+                  id="prenom"
+                  name="prenom"
+                  minlength="1"
+                  maxlength="30"
+                  required
+                  pattern="^[a-zA-ZÀ-ÿ\-\s]{1,30}$"
+                />
+                <p class="error-message">Vous devez saisir un prénom valide</p>
+              </div>
+              <div>
+                <label for="courriel">Courriel<span>*</span></label>
+                <input type="email" name="courriel" id="courriel" required />
+                <p class="error-message">
+                  Vous devez saisir un courriel valide
+                </p>
+              </div>
+              <div>
+                <label for="telephone">Numéro de téléphone<span>*</span></label>
+                <input
+                  type="tel"
+                  name="telephone"
+                  id="telephone"
+                  required
+                  placeholder="555-555-5555"
+                  title="Veuillez remplir au format suivant 555-555-5555"
+                  pattern="(\d{3})([\-\s]?)(\d{3})([\-\s]?)(\d{4})"
+                />
+                <p class="error-message">
+                  Vous devez saisir un numéro de téléphone valide
+                </p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <label for="numeroRue"
+                  >Numéro civique et rue<span>*</span></label
+                >
+                <input
+                  type="text"
+                  id="numeroRue"
+                  name="numeroRue"
+                  minlength="5"
+                  maxlength="100"
+                  required
+                />
+                <p class="error-message">
+                  Vous devez saisir une adresse valide
+                </p>
+              </div>
+              <div>
+                <label for="complementAdresse">Complément d'adresse</label>
+                <input
+                  type="text"
+                  id="complementAdresse"
+                  name="complementAdresse"
+                />
+              </div>
+              <div>
+                <label for="ville">Ville<span>*</span></label>
+                <input
+                  type="text"
+                  id="ville"
+                  name="ville"
+                  minlength="3"
+                  maxlength="100"
+                  required
+                />
+                <p class="error-message">Vous devez saisir une ville valide</p>
+              </div>
+              <div>
+                <label for="province">Province<span>*</span></label>
+                <input
+                  type="text"
+                  id="province"
+                  name="province"
+                  minlength="3"
+                  maxlength="100"
+                  required
+                />
+                <p class="error-message">
+                  Vous devez saisir une province valide
+                </p>
+              </div>
+              <div>
+                <label for="pays">Pays<span>*</span></label>
+                <input
+                  type="text"
+                  id="pays"
+                  name="pays"
+                  minlength="3"
+                  maxlength="100"
+                  required
+                />
+                <p class="error-message"></p>
+              </div>
+              <div>
+                <label for="codePostal">Code postal<span>*</span></label>
+                <input
+                  type="text"
+                  id="codePostal"
+                  name="codePostal"
+                  pattern="[A-z][0-9][A-z]\s?[0-9][A-z][0-9]"
+                  placeholder="H1H 1H1"
+                  required
+                />
+                <p class="error-message">
+                  Vous devez saisir un code postal valide
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- NAVIGATION SECTION INFORMATIONS CLIENT               -->
+          <nav class="navigation-section">
+            <div class="bouton btnRetour" data-direction="-1">Retour</div>
+            <div class="bouton inactif boutonContinuer" data-direction="1">
+              Continuer
+            </div>
+          </nav>
+        </section>
+
+        <!-- SECTION OPTIONS DE LIVRAISON  -->
+        <section data-section="2" class="optionLivraison scale-in-center">
+          <header>
+            <h2>Informations sur la livraison</h2>
+          </header>
+          <!-- DATE  -->
+          <div>
+            <label for="dateLivraison"
+              >Date idéale de livraison<span>*</span></label
+            >
+            <input
+              type="date"
+              id="dateLivraison"
+              name="dateLivraison"
+              min="2024-08-25"
+              required
+            />
+            <p class="error-message invisible">Vous devez choisir une date</p>
+          </div>
+          <!-- ============================================================= -->
+          <!-- LIVRAISON EN MAGASIN  -->
+          <div class="livraisonMagasin">
+            <label for="livraisonMagasin">Livraison en magasin</label>
+            <input type="checkbox" name="livraisonMagasin" class="inline" />
+            <select name="optionsSuccursales" id="livraisonMagasin" disabled>
+              <option value="">Choisissez une succursale</option>
+              <option value="Québec">Succursale de Québec</option>
+              <option value="Chicoutimi">Succursale de Chicoutimi</option>
+              <option value="Ottawa">Succursale d'Ottawa</option>
+            </select>
+          </div>
+          <!-- SERVICE DE LIVRAISON - TRANSPORTEUR  -->
+          <fieldset class="livraison">
+            <legend>Service de livraison</legend>
+
+            <label>
+              <input
+                type="radio"
+                class="inline premierBoutonRadio"
+                name="transporteur"
+                value="Poste Canada"
+              />Poste Canada
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="inline"
+                name="transporteur"
+                value="Fedex"
+              />FedEx
+            </label>
+            <label>
+              <input
+                type="radio"
+                class="inline"
+                name="transporteur"
+                value="Ups"
+              />UPS
+            </label>
+          </fieldset>
+          <!-- COMMENTAIRES  -->
+          <div class="commentaire">
+            <label for="commentaire">Commentaires</label>
+            <textarea
+              name="commentaire"
+              id="commentaire"
+              rows="10"
+              cols="40"
+              placeholder="Écrivez votre commentaire"
+            ></textarea>
+          </div>
+          <!-- NAVIGATION SECTION OPTIONS DE LIVRAISON -->
+          <nav class="navigation-section">
+            <div data-direction="-1" class="bouton btnRetour">Retour</div>
+            <div class="bouton inactif boutonContinuer" data-direction="1">
+              Continuer
+            </div>
+          </nav>
+
+          <!-- SECTION RÉSUMÉ  -->
+        </section>
+        <section data-section="3" class="resume scale-in-center">
+          <header>
+            <h2>Résumé</h2>
+          </header>
+          <!-- RÉSUMÉ INFORMATIONS CLIENT -->
+          <div>
+            <h3>Infos de l'utilisateur</h3>
+            <p>
+              Nom:
+              <span data-name="nom"></span>
+            </p>
+            <p>
+              Prénom:
+              <span data-name="prenom"></span>
+            </p>
+            <p>
+              Courriel:
+              <span data-name="courriel"></span>
+            </p>
+            <p>
+              Numéro de téléphone:
+              <span data-name="telephone"></span>
+            </p>
+            <p>
+              Numéro civique et rue:
+              <span data-name="numeroRue"></span>
+            </p>
+            <p>
+              Complément d'adresse:
+              <span data-name="complementAdresse"></span>
+            </p>
+            <p>
+              Ville:
+              <span data-name="ville"></span>
+            </p>
+            <p>
+              Province:
+              <span data-name="province"></span>
+            </p>
+            <p>
+              Pays:
+              <span data-name="pays"></span>
+            </p>
+            <p>
+              Code postal:
+              <span data-name="codePostal"></span>
+            </p>
+          </div>
+          <!-- RÉSUMÉ OPTIONS DE LIVRAISON -->
+          <div>
+            <h3>Informations sur la commande</h3>
+            <p>
+              Date de livraison:
+              <span data-name="dateLivraison"></span>
+            </p>
+            <p>
+              Livraison en magasin:
+              <span data-name="livraisonMagasin"></span>
+            </p>
+            <p>
+              Succursale:
+              <span data-name="optionsSuccursales"></span>
+            </p>
+            <p>
+              Service de livraison:
+              <span data-name="transporteur"></span>
+            </p>
+            <p>
+              Commentaire:
+              <span data-name="commentaire"></span>
+            </p>
+          </div>
+          <!-- NAVIGATION SECTION RÉSUMÉ -->
+          <nav class="navigation-section">
+            <div data-direction="-1" class="bouton btnRetour">Retour</div>
+            <input type="submit" class="bouton" value="Envoyer" />
+          </nav>
+        </section>
+      </form>
+    </main>
+    <!-- FOOTER -->
+    <footer class="pied-de-site">
+      <p>&copy; 2024 Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,141 @@
+/* Formulaire */
+@keyframes scale-in-center {
+  0% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+main[data-name="formulaire"] > header {
+  padding: var(--space-xl);
+}
+
+main[data-name="formulaire"] h1 {
+  text-align: center;
+}
+
+form section {
+  background-color: #1e1e1e;
+  color: hsl(0, 0%, 87%);
+  max-width: 700px;
+  padding: var(--space-xl);
+  /* margin-bottom: var(--space-lg); */
+  margin: auto;
+  border-radius: 5px;
+  border: 1px solid var(--color-accent);
+}
+
+form input {
+  border-radius: 5px;
+}
+
+fieldset {
+  border: 1px solid var(--color-medium);
+  margin-bottom: var(--space-lg);
+}
+
+textarea {
+  min-width: 100%;
+}
+
+input[type="submit"] {
+  background-color: var(--color-link);
+  color: var(--color-accent);
+  border-radius: 5px;
+  padding: var(--space-sm);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-md);
+  cursor: pointer;
+}
+
+form .bouton {
+  background-color: #d7b053;
+  color: black;
+}
+
+.obligatoire,
+form span:not(.resume > div span) {
+  color: var(--color-info);
+}
+
+.resume > div span {
+  color: var(--color-link);
+}
+
+.obligatoire {
+  padding-bottom: var(--space-sm);
+}
+
+/* Information sur le client*/
+
+.client {
+  box-sizing: content-box;
+}
+
+.client input {
+  min-width: 330px;
+  height: 25px;
+}
+.client > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.client > div > div {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.client > div > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Information sur la livraison */
+.optionLivraison > div:first-of-type {
+  display: inline-block;
+  padding-bottom: var(--space-lg);
+}
+
+.livraisonMagasin {
+  padding-bottom: var(--space-lg);
+  display: flex;
+  gap: var(--space-lg);
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
+}
+
+.livraison {
+  display: flex;
+  gap: var(--space-lg);
+}
+
+/* Résumé */
+.resume > div {
+  padding-bottom: var(--space-lg);
+}
+
+/*Navigation entre les sections*/
+.navigation-section {
+  display: flex;
+  justify-content: end;
+  gap: var(--space-md);
+}
+
+/*ANIMATION DU FORMULAIRE*/
+.scale-in-center {
+  -webkit-animation: scale-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+    both;
+  animation: scale-in-center 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}

@@ -1,0 +1,9 @@
+/* Grille de produits */
+.liste-parfums {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: flex-start;
+  order: 1;
+  margin-bottom: auto;
+}

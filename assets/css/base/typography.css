@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --font-family-primary: "Teko", sans-serif;
+  --font-family-secondary: "Roboto", sans-serif;
+
+  --font-size-xs: 0.75rem; /*12px*/
+  --font-size-sm: 0.875rem; /*14px*/
+  --font-size-md: 1rem; /*16px*/
+  --font-size-lg: 1.125rem; /*18px*/
+  --font-size-xl: 1.25rem; /*20px*/
+  --font-size-xxl: 1.5rem; /*24px*/
+  --font-size-xxxl: 1.875rem; /*30px*/
+}
+
+h1 {
+  font-size: var(--font-size-xxxl);
+  font-weight: bold;
+}
+h2 {
+  font-weight: 300;
+}
+h3 {
+  margin: 0;
+}
+p {
+  font-family: "Roboto";
+  font-size: var(--font-size-md);
+  line-height: 1.5;
+  font-weight: 400;
+}
+a {
+  font-size: var(--font-size-md);
+  text-decoration: none;
+  color: var(--color-accent);
+  transition: color 350ms;
+
+  &:hover {
+    color: var(--color-link);
+  }
+}
+label {
+  font-family: "Roboto";
+  font-size: var(--font-size-md);
+}

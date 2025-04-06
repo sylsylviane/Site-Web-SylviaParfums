@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  min-height: 100dvh;
+  min-width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary);
+}
+
+body {
+  font-family: var(--font-family-primary);
+  color: var(--color-accent);
+  font-size: var(--font-size-xl);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-xl);
+  flex-grow: 1;
+}
+
+/*CLASSES*/
+.logo {
+  max-width: 150px;
+}
+
+.entete {
+  padding: var(--space-lg) 0;
+  display: flex;
+  gap: var(--space-xxxl);
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-accent);
+  margin-left: var(--space-xl);
+  margin-right: var(--space-xl);
+}
+
+.produits {
+  display: flex;
+  gap: var(--space-xl);
+  margin-top: var(--space-xl);
+}
+
+.pied-de-site {
+  text-align: center;
+  padding: var(--space-lg) 0;
+  border-top: 1px solid var(--color-accent);
+  margin-left: var(--space-xl);
+  margin-right: var(--space-xl);
+}
