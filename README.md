@@ -4,7 +4,7 @@
 ### Les trois travaux pratiques de la session étaient liés pour obtenir un site web de produits
 
 #### Travail pratique 1
-- Se familiariser avec la syntaxe de base de Javascipt
+- Se familiariser avec la syntaxe de base de Javascript
 - Afficher une liste de produits
 - Trier les produits
 - Ajouter de l'interactivité pour afficher les détails d'un produit.
